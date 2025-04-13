@@ -1,104 +1,105 @@
-# 🧠 QuickTasks - Task Management System
+# 🖥️ QuickTasks Frontend
 
-![Java](https://img.shields.io/badge/Java-17+-red?style=flat&logo=java)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3-green?style=flat&logo=springboot)
-![React](https://img.shields.io/badge/React-19-blue?style=flat&logo=react)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue?style=flat&logo=postgresql)
-![Docker](https://img.shields.io/badge/Docker-%231572B6.svg?style=flat&logo=docker&logoColor=white)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-
-> **QuickTasks** es una aplicación full stack moderna que permite registrar usuarios, iniciar sesión con JWT, y gestionar tareas personales con autenticación y persistencia en base de datos.
+Interfaz web moderna para la gestión de tareas del sistema **QuickTasks**, desarrollada con **React 19**, **Vite** y **Tailwind CSS**. Este frontend interactúa con el backend de Spring Boot a través de una API REST protegida por JWT.
 
 ---
 
-## 🚀 Tecnologías principales
+## 🚀 Características principales
 
-- ✅ **Java 17 + Spring Boot 3.3**
-- ✅ **Spring Security + JWT**
-- ✅ **PostgreSQL con Docker Compose**
-- ✅ **React 19 + Vite + TailwindCSS**
-- ✅ Arquitectura limpia, desacoplada y escalable
+- Inicio de sesión con autenticación mediante JWT
+- Registro de nuevos usuarios
+- Visualización de perfil del usuario autenticado
+- Formularios profesionales y adaptables
+- Estilos con Tailwind CSS y tipografía optimizada
+- Interacción fluida con el backend mediante `fetch`/`axios`
+- Estructura modular con buenas prácticas
 
 ---
 
-## 🛠️ Estructura del proyecto
+## ⚙️ Tecnologías utilizadas
+
+- **React 19**
+- **Vite** (bundler moderno y ultra rápido)
+- **Tailwind CSS 4**
+- **PostCSS + Autoprefixer**
+- **ESLint** con configuración personalizada
+- Integración API REST con backend Spring Boot
+
+---
+
+## 📦 Instalación y ejecución
+
+1. Navegar al directorio:
+
+```bash
+cd frontend
+```
+
+2. Instalar dependencias:
+
+```bash
+npm install
+```
+
+3. Ejecutar la aplicación:
+
+```bash
+npm run dev
+```
+
+La app estará disponible en `http://localhost:5173`
+
+---
+
+## 📁 Estructura del proyecto
 
 ```
-quicktasks/
-├── backend/         # API RESTful con Spring Boot
-├── frontend/        # Interfaz moderna con React y TailwindCSS
-├── compose.yaml     # Servicio de PostgreSQL con Docker
-├── start.sh         # Script para iniciar todo automáticamente
+frontend/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── postcss.config.js
+├── tailwind.config.js
+├── package.json
 └── README.md
 ```
 
 ---
 
-## ⚙️ Requisitos
+## 🔐 Seguridad
 
-- [x] Java 17 o superior
-- [x] Node.js 18+ y npm
-- [x] Docker + Docker Compose
-- [x] Bash (o Git Bash en Windows)
-
----
-
-## 🧪 Cómo iniciar el proyecto
-
-Desde la raíz del proyecto (`quicktasks/`), ejecutá:
-
-```bash
-./start.sh
-```
-
-Esto hará lo siguiente:
-
-1. 🐳 Levanta PostgreSQL usando Docker
-2. 🧩 Ejecuta el backend con Spring Boot
-3. 🎨 Ejecuta el frontend con Vite
+- Los formularios envían credenciales cifradas al backend.
+- El token JWT se almacena de forma segura y se adjunta en cada solicitud protegida.
+- Se valida la autenticación y los permisos en el backend.
 
 ---
 
-## 🌐 Acceso
+## 📌 Notas adicionales
 
-| Servicio     | URL                       |
-|--------------|---------------------------|
-| Frontend     | http://localhost:5173     |
-| Backend API  | http://localhost:8080     |
+- El entorno está preparado para ser integrado fácilmente con servicios externos.
+- Se recomienda emparejar con el backend de QuickTasks para tener funcionalidad completa.
 
 ---
 
-## 🧪 Rutas útiles para testeo
+## 📝 Licencia
 
-| Endpoint             | Método | Descripción                   |
-|----------------------|--------|-------------------------------|
-| `/auth/register`     | POST   | Registro de usuario           |
-| `/auth/login`        | POST   | Inicio de sesión (JWT)        |
-| `/usuarios/auth/me`  | GET    | Perfil autenticado (JWT)      |
+Este proyecto está licenciado bajo la MIT License.
 
 ---
 
-## 📁 TODOs
+## 👨‍💻 Autor
 
-- [ ] CRUD completo de tareas
-- [ ] Gestión por estado (pendiente, en proceso, hecha)
-- [ ] Vistas personalizadas por usuario
-- [ ] Guardado y edición de tareas
-
----
-
-## 📄 Licencia
-
-Este proyecto está bajo licencia [MIT](https://choosealicense.com/licenses/mit/).
+**Emilio Funes**  
+📍 Argentina  
+💼 Backend Developer | Java | Spring Boot | React  
+🔗 [LinkedIn](https://www.linkedin.com/in/emilio-funes-8b140b21a/) · [GitHub](https://github.com/EmiFunes91)
 
 ---
 
-## 🤝 Contribuciones
+> _"Una buena interfaz no es solo estética, es comunicación efectiva con el usuario."_
 
-Si querés colaborar, ¡bienvenido! Podés abrir un issue, sugerir mejoras o enviar un PR.
-
----
-
-## ✨ Autor
-
-Desarrollado por [Emilio Funes](https://www.linkedin.com/in/emilio-funes-8b140b21a/)
