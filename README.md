@@ -1,104 +1,103 @@
-# 🧠 QuickTasks - Task Management System
+# QuickTasks
 
-![Java](https://img.shields.io/badge/Java-17+-red?style=flat&logo=java)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.3-green?style=flat&logo=springboot)
-![React](https://img.shields.io/badge/React-19-blue?style=flat&logo=react)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue?style=flat&logo=postgresql)
-![Docker](https://img.shields.io/badge/Docker-%231572B6.svg?style=flat&logo=docker&logoColor=white)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-
-> **QuickTasks** es una aplicación full stack moderna que permite registrar usuarios, iniciar sesión con JWT, y gestionar tareas personales con autenticación y persistencia en base de datos.
+**Aplicación web para gestión de tareas con autenticación JWT, backend en Spring Boot y frontend en React + Tailwind.**
 
 ---
 
-## 🚀 Tecnologías principales
+## 📅 Estado del Proyecto
 
-- ✅ **Java 17 + Spring Boot 3.3**
-- ✅ **Spring Security + JWT**
-- ✅ **PostgreSQL con Docker Compose**
-- ✅ **React 19 + Vite + TailwindCSS**
-- ✅ Arquitectura limpia, desacoplada y escalable
+☑️ Proyecto en desarrollo activo
 
 ---
 
-## 🛠️ Estructura del proyecto
+## 📊 Tecnologías utilizadas
 
+### Backend (Spring Boot)
+- Java 17
+- Spring Boot 3.3.10
+- Spring Security (JWT)
+- Spring Data JPA
+- PostgreSQL
+- Docker Compose
+- Lombok
+
+### Frontend (React + Vite)
+- React 19
+- Vite 6
+- Tailwind CSS 4
+- Axios
+
+---
+
+## 🚀 Cómo iniciar el proyecto
+
+Este proyecto utiliza Docker, Spring Boot y Vite con React. Para levantar todo el entorno de desarrollo, seguí estos pasos:
+
+### Desde Bash (recomendado):
+```bash
+./start.sh
+```
+
+> 🔁 Este script ejecuta automáticamente:
+> 1. `docker compose up -d` para levantar la base de datos (PostgreSQL)
+> 2. Compila y lanza el backend con Spring Boot
+> 3. Ejecuta el frontend con Vite en modo desarrollo
+
+---
+
+### Desde Windows (CMD o PowerShell):
+Si preferís usar Windows de forma nativa, asegurate de tener Git Bash o WSL instalado.
+
+```bash
+bash start.sh
+```
+
+> 💡 También podés crear un archivo `start.bat`, pero **se recomienda mantener una única fuente de verdad usando Bash** para entornos multiplataforma.
+
+---
+
+## 🔍 Características
+- Registro de usuarios
+- Inicio de sesión con generación de token JWT
+- Autenticación protegida por roles
+- Conexión a base de datos con PostgreSQL
+- Estilos responsivos y modernos con Tailwind
+
+---
+
+## 🔧 Estructura del Proyecto
 ```
 quicktasks/
-├── backend/         # API RESTful con Spring Boot
-├── frontend/        # Interfaz moderna con React y TailwindCSS
-├── compose.yaml     # Servicio de PostgreSQL con Docker
-├── start.sh         # Script para iniciar todo automáticamente
+├── backend/
+│   ├── src/main/java/... (código Java)
+│   └── compose.yaml
+├── frontend/
+│   ├── src/
+│   └── index.html, App.jsx, etc.
+├── start.sh
 └── README.md
 ```
 
 ---
 
-## ⚙️ Requisitos
-
-- [x] Java 17 o superior
-- [x] Node.js 18+ y npm
-- [x] Docker + Docker Compose
-- [x] Bash (o Git Bash en Windows)
-
----
-
-## 🧪 Cómo iniciar el proyecto
-
-Desde la raíz del proyecto (`quicktasks/`), ejecutá:
-
-```bash
-./start.sh
-```
-
-Esto hará lo siguiente:
-
-1. 🐳 Levanta PostgreSQL usando Docker
-2. 🧩 Ejecuta el backend con Spring Boot
-3. 🎨 Ejecuta el frontend con Vite
-
----
-
-## 🌐 Acceso
-
-| Servicio     | URL                       |
-|--------------|---------------------------|
-| Frontend     | http://localhost:5173     |
-| Backend API  | http://localhost:8080     |
-
----
-
-## 🧪 Rutas útiles para testeo
-
-| Endpoint             | Método | Descripción                   |
-|----------------------|--------|-------------------------------|
-| `/auth/register`     | POST   | Registro de usuario           |
-| `/auth/login`        | POST   | Inicio de sesión (JWT)        |
-| `/usuarios/auth/me`  | GET    | Perfil autenticado (JWT)      |
-
----
-
-## 📁 TODOs
-
+## ✅ Próximos pasos
+- [x] Registro e inicio de sesión funcional
 - [ ] CRUD completo de tareas
-- [ ] Gestión por estado (pendiente, en proceso, hecha)
-- [ ] Vistas personalizadas por usuario
-- [ ] Guardado y edición de tareas
+- [ ] Panel de usuario
+- [ ] Deploy en Railway o Vercel
 
 ---
 
 ## 📄 Licencia
 
-Este proyecto está bajo licencia [MIT](https://choosealicense.com/licenses/mit/).
-
----
-
-## 🤝 Contribuciones
-
-Si querés colaborar, ¡bienvenido! Podés abrir un issue, sugerir mejoras o enviar un PR.
+MIT — Libre para usar, modificar y distribuir.
 
 ---
 
 ## ✨ Autor
+**Emilio Funes**
+- [LinkedIn](https://www.linkedin.com/in/emilio-funes-8b140b21a/)
+- [GitHub](https://github.com/EmiFunes91)
 
-Desarrollado por [Emilio Funes](https://www.linkedin.com/in/emilio-funes-8b140b21a/)
+---
+
