@@ -8,12 +8,17 @@ export default defineConfig({
     proxy: {
       '/auth': {
         target: 'http://localhost:8080',
-        changeOrigin: true
+        changeOrigin: true,
+        secure: false,
       },
       '/usuarios': {
         target: 'http://localhost:8080',
-        changeOrigin: true
+        changeOrigin: true,
+        secure: false,
       }
     }
+  },
+  css: {
+    postcss: {} // no hace falta plugins vacíos, pero si tenés uno (ej. autoprefixer o tailwind), se carga desde postcss.config.js
   }
 })
